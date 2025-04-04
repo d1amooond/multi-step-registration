@@ -2,6 +2,8 @@
 
 A modern, responsive user registration flow built with Next.js, TypeScript, Zustand, and Material-UI.
 
+## [View Demo](https://multi-step-registration-khaki.vercel.app/)
+
 ![Registration Wizard Screenshot](public/screenshot.png)
 
 ## 🚀 Features
