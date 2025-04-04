@@ -16,12 +16,6 @@ export interface RegistrationAccountDetails {
   password: string;
 }
 
-export interface RegistrationUserData {
-  registrationUserDetails: RegistrationUserDetails;
-  registrationAddressDetails: RegistrationAddressDetails;
-  registrationAccountDetails: RegistrationAccountDetails;
-}
-
 export interface FormErrors {
   [key: string]: string;
 }

@@ -1,8 +1,6 @@
 import { Box, Stack } from '@mui/material';
 import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { FormCard } from '@/components/ui/form-card';
-import { TextField } from '@/components/ui/text-field';
+import { Button, FormCard, TextField } from '@/components/ui';
 import { useRegistrationStore } from '@/stores/registration.store';
 import { FormErrors } from '@/types/registration';
 import { showZodErrors } from '@/utils/validation/errors';

@@ -10,16 +10,11 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-// Load typescript-eslint plugin once
 const typescriptEslint = await import('@typescript-eslint/eslint-plugin');
-// Import prettier plugin - use default export
 const prettierPlugin = (await import('eslint-plugin-prettier')).default;
 
 const eslintConfig = [
-  // Use compat for the Next.js rules
   ...compat.extends('next/core-web-vitals'),
-
-  // TypeScript configuration
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
@@ -46,7 +41,6 @@ const eslintConfig = [
     },
   },
 
-  // Prettier configuration
   {
     files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
     plugins: {
@@ -57,7 +51,6 @@ const eslintConfig = [
     },
   },
 
-  // General configuration
   {
     files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
     rules: {
@@ -94,8 +87,6 @@ const eslintConfig = [
       ],
     },
   },
-
-  // Add prettier config last to override other formatting rules
   eslintConfigPrettier,
 ];
 

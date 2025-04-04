@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stepper } from '@/components/ui/stepper';
+import { Stepper } from '@/components/ui';
 import { RegistrationSteps } from '@/enums';
 
 interface RegistrationStepperProps {

@@ -2,7 +2,6 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { RegistrationSteps } from '@/enums';
 import {
-  RegistrationUserData,
   RegistrationUserDetails,
   RegistrationAddressDetails,
   RegistrationAccountDetails,
@@ -23,8 +22,6 @@ interface RegistrationStore {
   resetForm: () => void;
   nextStep: () => void;
   prevStep: () => void;
-
-  getUserData: () => RegistrationUserData;
 }
 
 const initialState = {
@@ -67,7 +64,6 @@ export const useRegistrationStore = create<RegistrationStore>()(
           ),
         })),
 
-      // Form data updates
       updateUserDetails: (data) =>
         set((state) => ({
           userDetails: { ...state.userDetails, ...data },
@@ -83,15 +79,6 @@ export const useRegistrationStore = create<RegistrationStore>()(
 
       completeForm: () => set({ isFormComplete: true }),
       resetForm: () => set(initialState),
-
-      getUserData: () => {
-        const { userDetails, addressDetails, accountDetails } = get();
-        return {
-          registrationUserDetails: userDetails,
-          registrationAddressDetails: addressDetails,
-          registrationAccountDetails: accountDetails,
-        };
-      },
     }),
     {
       name: 'registration-storage',

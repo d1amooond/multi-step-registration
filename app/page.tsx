@@ -21,7 +21,6 @@ export default function Home() {
     }
   }, [isFormComplete, router]);
 
-  // Render current step form based on store state
   const renderCurrentStep = () => {
     switch (currentStep) {
       case RegistrationSteps.UserDetails:

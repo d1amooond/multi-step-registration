@@ -2,8 +2,7 @@ import { Box, Stack, Divider } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import ReviewSection from '@/components/registration/review-section';
-import { Button } from '@/components/ui/button';
-import { FormCard } from '@/components/ui/form-card';
+import { Button, FormCard } from '@/components/ui';
 import { useRegistrationStore } from '@/stores/registration.store';
 
 const ReviewForm: React.FC = () => {
